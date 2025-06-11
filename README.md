@@ -2,7 +2,7 @@
 # 🎵 LE SSERAFIM Page API Documentation
 
 **Base URL:** `http://localhost:8080/api`
-
+**Swagger UI documentation:** `http://localhost:8080/swagger-ui/index.html` 
 ---
 
 ## 📁 Endpoints
