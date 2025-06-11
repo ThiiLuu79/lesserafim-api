@@ -1,0 +1,301 @@
+[
+  {
+    "id": 1,
+    "title": "FEARLESS",
+    "releaseDate": "2022-05-02",
+    "songs": [
+      "The World Is My Oyster",
+      "FEARLESS",
+      "Blue Flame",
+      "The Great Mermaid",
+      "Sour Grapes"
+    ],
+    "imageURL": "fearless.png"
+  },
+  {
+    "id": 2,
+    "title": "ANTIFRAGILE",
+    "releaseDate": "2022-10-17",
+    "songs": [
+      "The Hydra",
+      "ANTIFRAGILE",
+      "Impurities",
+      "No Celestial",
+      "Good Parts (when the quality is bad but I am)"
+    ],
+    "imageURL": "antifragile.png"
+  },
+  {
+    "id": 3,
+    "title": "FEARLESS (Japanese ver.)",
+    "releaseDate": "2023-01-25",
+    "songs": [
+      "FEARLESS (Japanese ver.)",
+      "Blue Flame (Japanese ver.)",
+      "Choices"
+    ],
+    "imageURL": "fearlessJP.png"
+  },
+  {
+    "id": 4,
+    "title": "UNFORGIVEN",
+    "releaseDate": "2023-05-01",
+    "songs": [
+      "The World Is My Oyster (2023 Ver.)",
+      "FEARLESS (2023 Ver.)",
+      "Blue Flame (2023 Ver.)",
+      "The Hydra",
+      "ANTIFRAGILE",
+      "Impurities",
+      "Burn the Bridge",
+      "UNFORGIVEN (feat. Nile Rodgers)",
+      "No-Return (Into the unknown)",
+      "Eve, Psyche & The Bluebeard's wife",
+      "FEARNOT (Between you, me and the lamppost)",
+      "Flash Forward",
+      "Fire in the belly"
+    ],
+    "imageURL": "unforgiven.png"
+  },
+  {
+    "id": 5,
+    "title": "Guardian",
+    "releaseDate": "2023-06-09",
+    "songs": [
+      "Guardian",
+      "Guardian (Instrumental)"
+    ],
+    "imageURL": "guardian.png"
+  },
+  {
+    "id": 6,
+    "title": "Eve, Psyche & The Bluebeard's Wife (feat. BIBI, Camo, Mirani)",
+    "releaseDate": "2023-06-27",
+    "songs": [
+      "Eve, Psyche & The Bluebeard's Wife (feat. BIBI, Camo, Mirani)"
+    ],
+    "imageURL": "eptbf.png"
+  },
+  {
+    "id": 7,
+    "title": "Eve, Psyche & The Bluebeard's Wife (English Ver.)",
+    "releaseDate": "2023-07-06",
+    "songs": [
+      "Eve, Psyche & The Bluebeard's Wife (English Ver.)"
+    ],
+    "imageURL": "eptbf.png"
+  },
+  {
+    "id": 8,
+    "title": "UNFORGIVEN (Japanese ver.)",
+    "releaseDate": "2023-08-22",
+    "songs": [
+      "UNFORGIVEN -Japanese ver.- (ft.Nile Rodgers, Ado)",
+      "ANTIFRAGILE (Japanese ver.)",
+      "ジュエリー (Prod.imase)"
+    ],
+    "imageURL": "unforgivenJP.png"
+  },
+  {
+    "id": 9,
+    "title": "Perfect Night",
+    "releaseDate": "2023-10-27",
+    "songs": ["Perfect Night"],
+    "imageURL": "perfectNight.png"
+  },
+  {
+    "id": 10,
+    "title": "Perfect Night (Remix)",
+    "releaseDate": "2023-10-30",
+    "songs": [
+      "Perfect Night (Speed Up ver.)",
+      "Perfect Night (Slowed + Reverb ver.)"
+    ],
+    "imageURL": "perfectNightRemix.png"
+  },
+  {
+    "id": 11,
+    "title": "Smart (feat. LE SSERAFIM)",
+    "releaseDate": "2023-12-15",
+    "songs": ["Smart (feat. LE SSERAFIM)"],
+    "imageURL": "smart.png"
+  },
+  {
+    "id": 12,
+    "title": "Perfect Night (Japanese ver.)",
+    "releaseDate": "2024-01-25",
+    "songs": ["Perfect Night (Japanese ver.)"],
+    "imageURL": "perfectNightJP.png"
+  },
+  {
+    "id": 13,
+    "title": "Easy",
+    "releaseDate": "2024-02-19",
+    "songs": [
+      "Good Bones",
+      "Easy",
+      "Swan Song",
+      "Smart",
+      "We got so much"
+    ],
+    "imageURL": "easy.png"
+  },
+  {
+    "id": 14,
+    "title": "Easy (Remix)",
+    "releaseDate": "2024-02-23",
+    "songs": ["Easy (RAYE Remix)"],
+    "imageURL": "easyRemix.png"
+  },
+  {
+    "id": 15,
+    "title": "Smart (Japanese ver.)",
+    "releaseDate": "2024-03-20",
+    "songs": ["Smart (Japanese ver.)"],
+    "imageURL": "smartJP.png"
+  },
+  {
+    "id": 16,
+    "title": "EASY -Japanese ver.-",
+    "releaseDate": "2024-04-10",
+    "songs": ["EASY -Japanese ver.-"],
+    "imageURL": "easyJP.png"
+  },
+  {
+    "id": 17,
+    "title": "UNFORGIVEN (feat. Nile Rodgers, Ado) - Japanese ver. -",
+    "releaseDate": "2024-04-10",
+    "songs": ["UNFORGIVEN (feat. Nile Rodgers, Ado) - Japanese ver. -"],
+    "imageURL": "unforgivenJPAdo.png"
+  },
+  {
+    "id": 18,
+    "title": "EASY (Remix Pack)",
+    "releaseDate": "2024-04-12",
+    "songs": [
+      "EASY (RAYE Remix)",
+      "EASY (Jengi Remix)",
+      "EASY (Banoffee Remix)",
+      "EASY (Slow Motion Ver.)"
+    ],
+    "imageURL": "easyRemixPack.png"
+  },
+  {
+    "id": 19,
+    "title": "Smart (Remix)",
+    "releaseDate": "2024-04-19",
+    "songs": ["Smart (Remix)"],
+    "imageURL": "smartRemix.png"
+  },
+  {
+    "id": 20,
+    "title": "Smart (Remix Pack)",
+    "releaseDate": "2024-05-17",
+    "songs": [
+      "Smart (Remix)",
+      "Smart (Slowed + Reverb ver.)",
+      "Smart (Speed Up ver.)"
+    ],
+    "imageURL": "smartRemixPack.png"
+  },
+  {
+    "id": 21,
+    "title": "Burn the Bridge (Instrumental)",
+    "releaseDate": "2024-05-20",
+    "songs": ["Burn the Bridge (Instrumental)"],
+    "imageURL": "burnBridgeInstrumental.png"
+  },
+  {
+    "id": 22,
+    "title": "No-Return (Instrumental)",
+    "releaseDate": "2024-05-21",
+    "songs": ["No-Return (Instrumental)"],
+    "imageURL": "noReturnInstrumental.png"
+  },
+  {
+    "id": 23,
+    "title": "Eve, Psyche & The Bluebeard’s Wife (Instrumental)",
+    "releaseDate": "2024-05-22",
+    "songs": ["Eve, Psyche & The Bluebeard’s Wife (Instrumental)"],
+    "imageURL": "eptbfInstrumental.png"
+  },
+  {
+    "id": 24,
+    "title": "FEARNOT (Between you, me and the lamppost) (Instrumental)",
+    "releaseDate": "2024-05-23",
+    "songs": [
+      "FEARNOT (Between you, me and the lamppost) (Instrumental)"
+    ],
+    "imageURL": "fearnottInstrumental.png"
+  },
+  {
+    "id": 25,
+    "title": "Flash Forward (Instrumental)",
+    "releaseDate": "2024-05-24",
+    "songs": ["Flash Forward (Instrumental)"],
+    "imageURL": "flashForwardInstrumental.png"
+  },
+  {
+    "id": 26,
+    "title": "Fire in the belly (Instrumental)",
+    "releaseDate": "2024-05-25",
+    "songs": ["Fire in the belly (Instrumental)"],
+    "imageURL": "fireBellyInstrumental.png"
+  },
+  {
+    "id": 27,
+    "title": "Blue Flame (2023 Ver.) (Instrumental)",
+    "releaseDate": "2024-05-26",
+    "songs": ["Blue Flame (2023 Ver.) (Instrumental)"],
+    "imageURL": "blueFlameInstrumental.png"
+  },
+  {
+    "id": 28,
+    "title": "FEARLESS (2023 Ver.) (Instrumental)",
+    "releaseDate": "2024-05-27",
+    "songs": ["FEARLESS (2023 Ver.) (Instrumental)"],
+    "imageURL": "fearless2023Instrumental.png"
+  },
+  {
+    "id": 29,
+    "title": "The World Is My Oyster (2023 Ver.) (Instrumental)",
+    "releaseDate": "2024-05-28",
+    "songs": ["The World Is My Oyster (2023 Ver.) (Instrumental)"],
+    "imageURL": "worldOysterInstrumental.png"
+  },
+  {
+    "id": 30,
+    "title": "LE SSERAFIM x Overwatch 2",
+    "releaseDate": "2024-11-01",
+    "songs": ["Perfect Night (Overwatch 2 ver.)"],
+    "imageURL": "overwatch.png"
+  },
+  {
+    "id": 31,
+    "title": "Good Bones (Acoustic Ver.)",
+    "releaseDate": "2024-11-15",
+    "songs": ["Good Bones (Acoustic Ver.)"],
+    "imageURL": "goodBonesAcoustic.png"
+  },
+  {
+    "id": 32,
+    "title": "We got so much (Slowed + Reverb Ver.)",
+    "releaseDate": "2024-12-01",
+    "songs": ["We got so much (Slowed + Reverb Ver.)"],
+    "imageURL": "weGotSoMuchSlowed.png"
+  },
+  {
+    "id": 33,
+    "title": "Smart (Acoustic Ver.)",
+    "releaseDate": "2025-02-14",
+    "songs": ["Smart (Acoustic Ver.)"],
+    "imageURL": "smartAcoustic.png"
+  },
+  {
+    "id": 34,
+    "title": "DIFFERENT",
+    "releaseDate": "2025-06-24",
+    "songs": ["DIFFERENT"],
+    "imageURL": "different.png"
+  }
+]
