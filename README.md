@@ -1,8 +1,9 @@
 
 # 🎵 LE SSERAFIM Page API Documentation
 
-**Base URL:** `http://localhost:8080/api`
-**Swagger UI documentation:** `http://localhost:8080/swagger-ui/index.html` 
+**Base URL:** `https://lesserafimapi.onrender.com/api`   
+**Swagger UI documentation:** `https://lesserafimapi.onrender.com/swagger-ui/index.html`   
+**Locally:** `http://localhost:8080/api`   
 ---
 
 ## 📁 Endpoints
