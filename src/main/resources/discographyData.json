@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "FEARLESS",
+    "type": "1st Mini Album",
     "releaseDate": "2022-05-02",
     "songs": [
       "The World Is My Oyster",
@@ -15,6 +16,7 @@
   {
     "id": 2,
     "title": "ANTIFRAGILE",
+    "type": "2nd Mini Album",
     "releaseDate": "2022-10-17",
     "songs": [
       "The Hydra",
@@ -28,6 +30,7 @@
   {
     "id": 3,
     "title": "FEARLESS (Japanese ver.)",
+    "type": "1st Japanese Single Album",
     "releaseDate": "2023-01-25",
     "songs": [
       "FEARLESS (Japanese ver.)",
@@ -39,6 +42,7 @@
   {
     "id": 4,
     "title": "UNFORGIVEN",
+    "type": "1st Studio Album",
     "releaseDate": "2023-05-01",
     "songs": [
       "The World Is My Oyster (2023 Ver.)",
@@ -60,6 +64,7 @@
   {
     "id": 5,
     "title": "Guardian",
+    "type": "OST Single (BASTIONS OST Part.4)",
     "releaseDate": "2023-06-09",
     "songs": [
       "Guardian",
@@ -70,6 +75,7 @@
   {
     "id": 6,
     "title": "Eve, Psyche & The Bluebeard's Wife (feat. BIBI, Camo, Mirani)",
+    "type": "Single",
     "releaseDate": "2023-06-27",
     "songs": [
       "Eve, Psyche & The Bluebeard's Wife (feat. BIBI, Camo, Mirani)"
@@ -79,6 +85,7 @@
   {
     "id": 7,
     "title": "Eve, Psyche & The Bluebeard's Wife (English Ver.)",
+    "type": "English Single",
     "releaseDate": "2023-07-06",
     "songs": [
       "Eve, Psyche & The Bluebeard's Wife (English Ver.)"
@@ -88,6 +95,7 @@
   {
     "id": 8,
     "title": "UNFORGIVEN (Japanese ver.)",
+    "type": "2nd Japanese Single Album",
     "releaseDate": "2023-08-22",
     "songs": [
       "UNFORGIVEN -Japanese ver.- (ft.Nile Rodgers, Ado)",
@@ -99,6 +107,7 @@
   {
     "id": 9,
     "title": "Perfect Night",
+    "type": "Single",
     "releaseDate": "2023-10-27",
     "songs": ["Perfect Night"],
     "imageURL": "https://lesserafimapi.onrender.com/images/discography/perfectNight.png"
@@ -106,6 +115,7 @@
   {
     "id": 10,
     "title": "Perfect Night (Remix)",
+    "type": "Remix Single",
     "releaseDate": "2023-10-30",
     "songs": [
       "Perfect Night (Speed Up ver.)",
@@ -115,25 +125,28 @@
   },
   {
     "id": 11,
-    "title": "Smart (feat. LE SSERAFIM)",
-    "releaseDate": "2023-12-15",
-    "songs": ["Smart (feat. LE SSERAFIM)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/smart.png"
+    "title": "ドレスコード (Dresscode) (Prod. imase)",
+    "type": "Japanese OST Single",
+    "releaseDate": "2023-11-19",
+    "songs": ["ドレスコード (Dresscode) (Prod. imase)"],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/dresscode.png"
   },
   {
     "id": 12,
-    "title": "Perfect Night (Japanese ver.)",
-    "releaseDate": "2024-01-25",
-    "songs": ["Perfect Night (Japanese ver.)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/perfectNightJP.png"
+    "title": "Perfect Night (Holiday Remix)",
+    "type": "Remix Single",
+    "releaseDate": "2023-11-23",
+    "songs": ["Perfect Night (Holiday Remix)"],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/perfectNightHoliday.png"
   },
   {
     "id": 13,
-    "title": "Easy",
+    "title": "EASY",
+    "type": "3rd Mini Album",
     "releaseDate": "2024-02-19",
     "songs": [
       "Good Bones",
-      "Easy",
+      "EASY",
       "Swan Song",
       "Smart",
       "We got so much"
@@ -142,158 +155,234 @@
   },
   {
     "id": 14,
-    "title": "Easy (Remix)",
+    "title": "EASY (English Ver.)",
+    "type": "English Single",
     "releaseDate": "2024-02-23",
-    "songs": ["Easy (RAYE Remix)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/easyRemix.png"
+    "songs": [
+      "EASY (English Ver.)",
+      "EASY (English Ver.) (Speed Up ver.)",
+      "EASY (English Ver.) (Slowed + Reverb ver.)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/easyEN.png"
   },
   {
     "id": 15,
-    "title": "Smart (Japanese ver.)",
-    "releaseDate": "2024-03-20",
-    "songs": ["Smart (Japanese ver.)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/smartJP.png"
+    "title": "EASY (Remixes)",
+    "type": "Remixes",
+    "releaseDate": "2024-02-28",
+    "songs": [
+      "EASY",
+      "EASY (Pluggnb Remix)",
+      "EASY (Drum & Bass Remix)",
+      "EASY (Sped Up ver.)",
+      "EASY (Slowed + Reverb ver.)",
+      "EASY (Instrumental)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/easyRemix.png"
   },
   {
     "id": 16,
-    "title": "EASY -Japanese ver.-",
-    "releaseDate": "2024-04-10",
-    "songs": ["EASY -Japanese ver.-"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/easyJP.png"
-  },
-  {
-    "id": 17,
-    "title": "UNFORGIVEN (feat. Nile Rodgers, Ado) - Japanese ver. -",
-    "releaseDate": "2024-04-10",
-    "songs": ["UNFORGIVEN (feat. Nile Rodgers, Ado) - Japanese ver. -"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/unforgivenJPAdo.png"
-  },
-  {
-    "id": 18,
-    "title": "EASY (Remix Pack)",
-    "releaseDate": "2024-04-12",
+    "title": "Smart (Remixes)",
+    "type": "Remixes",
+    "releaseDate": "2024-03-22",
     "songs": [
-      "EASY (RAYE Remix)",
-      "EASY (Jengi Remix)",
-      "EASY (Banoffee Remix)",
-      "EASY (Slow Motion Ver.)"
+      "Smart",
+      "Smart (English ver.)",
+      "Smart (Smartest Remix)",
+      "Smart (Chill Remix)",
+      "Smart (Miami Bass Remix)",
+      "Smart (Festival House Remix)",
+      "Smart (Sped Up ver.)",
+      "Smart (Slowed + Reverb ver.)",
+      "Smart (Instrumental)"
     ],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/easyRemixPack.png"
-  },
-  {
-    "id": 19,
-    "title": "Smart (Remix)",
-    "releaseDate": "2024-04-19",
-    "songs": ["Smart (Remix)"],
     "imageURL": "https://lesserafimapi.onrender.com/images/discography/smartRemix.png"
   },
   {
-    "id": 20,
-    "title": "Smart (Remix Pack)",
-    "releaseDate": "2024-05-17",
+    "id": 17,
+    "title": "Perfect Night (For FEARNOT)",
+    "type": "4th English Remix Single",
+    "releaseDate": "2024-08-04",
     "songs": [
-      "Smart (Remix)",
-      "Smart (Slowed + Reverb ver.)",
-      "Smart (Speed Up ver.)"
+      "Perfect Night (for FEARNOT)",
+      "Perfect Night"
     ],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/smartRemixPack.png"
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/perfectNightFEARNOT.png"
+  },
+  {
+    "id": 18,
+    "title": "CRAZY",
+    "type": "4th Mini Album",
+    "releaseDate": "2024-08-30",
+    "songs": [
+      "Chasing Lightning",
+      "CRAZY",
+      "Pierrot",
+      "1-800-hot-n-fun",
+      "미치지 못하는 이유"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/crazy.png"
+  },
+  {
+    "id": 19,
+    "title": "CRAZY (Party Remixes 1)",
+    "type": "1st Remix Album",
+    "releaseDate": "2024-09-02",
+    "songs": [
+      "CRAZY",
+      "CRAZY (English ver.)",
+      "CRAZY (Vogue Remix) (feat. Dashaun Wesley)",
+      "CRAZY (Bounce Up Remix)",
+      "CRAZY (Dance Remix)",
+      "CRAZY (Sped Up ver.)",
+      "CRAZY (Slowed + Reverb ver.)",
+      "CRAZY (Inst.)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/crazyParty.png"
+  },
+  {
+    "id": 20,
+    "title": "CRAZY (Feat. PinkPantheress)",
+    "type": "3rd Remix Single",
+    "releaseDate": "2024-09-04",
+    "songs": [
+      "CRAZY",
+      "CRAZY (feat. PinkPantheress)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/crazyPink.png"
   },
   {
     "id": 21,
-    "title": "Burn the Bridge (Instrumental)",
-    "releaseDate": "2024-05-20",
-    "songs": ["Burn the Bridge (Instrumental)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/burnBridgeInstrumental.png"
+    "title": "CRAZY (David Guetta Remix)",
+    "type": "4th Remix Single",
+    "releaseDate": "2024-09-09",
+    "songs": [
+      "CRAZY (David Guetta Remix)",
+      "CRAZY",
+      "CRAZY (David Guetta Remix) (Extended ver.)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/crazyDavid.png"
   },
   {
     "id": 22,
-    "title": "No-Return (Instrumental)",
-    "releaseDate": "2024-05-21",
-    "songs": ["No-Return (Instrumental)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/noReturnInstrumental.png"
+    "title": "CRAZY (Party Remixes 2)",
+    "type": "2nd Remix Album",
+    "releaseDate": "2024-09-12",
+    "songs": [
+      "CRAZY",
+      "CRAZY (EBM Remix)",
+      "CRAZY (Super Crazy Remix)",
+      "CRAZY (Vamos Remix)",
+      "CRAZY (Mash-up ver.) (feat. PinkPantheress, Dashaun Wesley)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/crazyParty2.png"
   },
   {
     "id": 23,
-    "title": "Eve, Psyche & The Bluebeard’s Wife (Instrumental)",
-    "releaseDate": "2024-05-22",
-    "songs": ["Eve, Psyche & The Bluebeard’s Wife (Instrumental)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/eptbfInstrumental.png"
+    "title": "Star Signs",
+    "type": "Japanese Pre-Release Single",
+    "releaseDate": "2024-11-13",
+    "songs": ["Star Signs"],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/starSign.png"
   },
   {
     "id": 24,
-    "title": "FEARNOT (Between you, me and the lamppost) (Instrumental)",
-    "releaseDate": "2024-05-23",
+    "title": "CRAZY (Japanese ver.)",
+    "type": "3rd Japanese Single",
+    "releaseDate": "2024-12-11",
     "songs": [
-      "FEARNOT (Between you, me and the lamppost) (Instrumental)"
+      "CRAZY (Japanese ver.)",
+      "EASY (Japanese ver.)",
+      "Star Signs"
     ],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/fearnottInstrumental.png"
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/crazyJP.png"
   },
   {
     "id": 25,
-    "title": "Flash Forward (Instrumental)",
-    "releaseDate": "2024-05-24",
-    "songs": ["Flash Forward (Instrumental)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/flashForwardInstrumental.png"
+    "title": "CRAZY (Japanese ver.) (Party Remixes)",
+    "type": "Remixes Single",
+    "releaseDate": "2024-12-18",
+    "songs": [
+      "CRAZY (Japanese ver.)",
+      "CRAZY (Japanese ver.) (feat.JP THE WAVY)",
+      "CRAZY (Japanese ver.) (Chaki Zulu Remix)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/crazyJPParty.png"
   },
   {
     "id": 26,
-    "title": "Fire in the belly (Instrumental)",
-    "releaseDate": "2024-05-25",
-    "songs": ["Fire in the belly (Instrumental)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/fireBellyInstrumental.png"
+    "title": "HOT",
+    "type": "5th Mini Album",
+    "releaseDate": "2025-03-14",
+    "songs": [
+      "Born Fire",
+      "HOT",
+      "Come Over",
+      "Ash",
+      "So Cynical (Badum)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/hot.png"
   },
   {
     "id": 27,
-    "title": "Blue Flame (2023 Ver.) (Instrumental)",
-    "releaseDate": "2024-05-26",
-    "songs": ["Blue Flame (2023 Ver.) (Instrumental)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/blueFlameInstrumental.png"
+    "title": "HOT (English ver.)",
+    "type": "Single",
+    "releaseDate": "2025-03-17",
+    "songs": [
+      "HOT (English ver.)",
+      "HOT",
+      "HOT (Sped Up ver.)",
+      "HOT (Slowed + Reverb ver.)",
+      "HOT (Inst.)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/hotEN.png"
   },
   {
     "id": 28,
-    "title": "FEARLESS (2023 Ver.) (Instrumental)",
-    "releaseDate": "2024-05-27",
-    "songs": ["FEARLESS (2023 Ver.) (Instrumental)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/fearless2023Instrumental.png"
+    "title": "HOT (LE SSERAFIM Package)",
+    "type": "Package Album",
+    "releaseDate": "2025-03-18",
+    "songs": [
+      "HOT",
+      "HOT (KIM CHAEWON ver.)",
+      "HOT (SAKURA ver.)",
+      "HOT (HUH YUNJIN ver.)",
+      "HOT (KAZUHA ver.)",
+      "HOT (HONG EUNCHAE ver.)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/hotPackage.png"
   },
   {
     "id": 29,
-    "title": "The World Is My Oyster (2023 Ver.) (Instrumental)",
-    "releaseDate": "2024-05-28",
-    "songs": ["The World Is My Oyster (2023 Ver.) (Instrumental)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/worldOysterInstrumental.png"
+    "title": "Come Over (Remixes)",
+    "type": "Remixes Single",
+    "releaseDate": "2025-03-31",
+    "songs": [
+      "Come Over",
+      "Come Over (Hyperpop Remix)",
+      "Come Over (Bossa Nova Remix)",
+      "Come Over (Funk Remix)",
+      "Come Over (Sped Up ver.)",
+      "Come Over (Slowed + Reverb ver.)",
+      "Come Over (Inst.)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/comeoverremix.png"
   },
   {
     "id": 30,
-    "title": "LE SSERAFIM x Overwatch 2",
-    "releaseDate": "2024-11-01",
-    "songs": ["Perfect Night (Overwatch 2 ver.)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/overwatch.png"
+    "title": "HOT (English ver.) (feat. JADE)",
+    "type": "English Single",
+    "releaseDate": "2025-04-14",
+    "songs": [
+      "HOT",
+      "HOT (English ver.) (feat. JADE)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/hotjade.png"
   },
   {
     "id": 31,
-    "title": "Good Bones (Acoustic Ver.)",
-    "releaseDate": "2024-11-15",
-    "songs": ["Good Bones (Acoustic Ver.)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/goodBonesAcoustic.png"
-  },
-  {
-    "id": 32,
-    "title": "We got so much (Slowed + Reverb Ver.)",
-    "releaseDate": "2024-12-01",
-    "songs": ["We got so much (Slowed + Reverb Ver.)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/weGotSoMuchSlowed.png"
-  },
-  {
-    "id": 33,
-    "title": "Smart (Acoustic Ver.)",
-    "releaseDate": "2025-02-14",
-    "songs": ["Smart (Acoustic Ver.)"],
-    "imageURL": "https://lesserafimapi.onrender.com/images/discography/smartAcoustic.png"
-  },
-  {
-    "id": 34,
     "title": "DIFFERENT",
+    "type": "4th Japanese Single",
     "releaseDate": "2025-06-24",
     "songs": ["DIFFERENT"],
     "imageURL": "https://lesserafimapi.onrender.com/images/discography/different.png"

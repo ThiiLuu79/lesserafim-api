@@ -28,6 +28,7 @@ public class DiscographyServiceTest {
         Discography sample = new Discography();
         sample.setId(1);
         sample.setTitle("FEARLESS");
+        sample.setType("1st album");
         sample.setReleaseDate(new Date());
         sample.setSongs(Arrays.asList("The World Is My Oyster", "FEARLESS"));
 

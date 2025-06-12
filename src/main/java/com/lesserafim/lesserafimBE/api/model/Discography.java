@@ -6,6 +6,7 @@ import java.util.List;
 public class Discography {
     private int id;
     private String title;
+    private String type;
     private Date releaseDate;
     private List<String> songs;
     private String imageURL;
@@ -13,9 +14,10 @@ public class Discography {
     public Discography() {
     }
 
-    public Discography(int id, String title, Date releaseDate, List<String> songs, String imageURL) {
+    public Discography(int id, String title, String type, Date releaseDate, List<String> songs, String imageURL) {
         this.id = id;
         this.title = title;
+        this.type = type;
         this.releaseDate = releaseDate;
         this.songs = songs;
         this.imageURL = imageURL;
@@ -35,6 +37,14 @@ public class Discography {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public Date getReleaseDate() {
