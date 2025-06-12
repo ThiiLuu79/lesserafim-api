@@ -1,5 +1,5 @@
 
-# 🎵 LE SSERAFIM Page API Documentation
+# 🎵 LE SSERAFIM API Documentation
 
 Base URL: https://lesserafimapi.onrender.com/api   
 Locally: http://localhost:8080/api   
@@ -10,9 +10,9 @@ Swagger UI documentation: https://lesserafimapi.onrender.com/swagger-ui/index.ht
 
 ### 🔹 GET `/members`
 
-Retrieve a list of all LE SSERAFIM members.
+Get a list of all LE SSERAFIM members.
 
-#### Example Response:
+#### Example Response :
 ```json
 [
   {
@@ -40,9 +40,9 @@ Retrieve a list of all LE SSERAFIM members.
 
 ### 🔹 GET `/members/{id}`
 
-Retrieve details of a specific member by their ID.
+Get details of a specific member by their ID.
 
-#### Example:
+#### Example :
 `GET /members/1`
 
 ---
@@ -51,7 +51,7 @@ Retrieve details of a specific member by their ID.
 
 Get all discography entries.
 
-#### Example Response:
+#### Example Response :
 ```json
 [
   {
@@ -74,18 +74,18 @@ Get all discography entries.
 
 ### 🔹 GET `/discographies/{id}`
 
-Retrieve a specific album by ID.
+Get a specific album by ID.
 
-#### Example:
+#### Example :
 `GET /discographies/1`
 
 ---
 
 ### 🔹 GET `/musicVideos`
 
-Fetch all official music videos.
+Get all official music videos.
 
-#### Example Response:
+#### Example Response :
 ```json
 [
   {
@@ -103,16 +103,16 @@ Fetch all official music videos.
 
 Get specific music video details by ID.
 
-#### Example:
+#### Example :
 `GET /musicVideos/1`
 
 ---
 
 ### 🔹 GET `/timeline`
 
-Retrieve major events and milestones in LE SSERAFIM’s history.
+Get major events and milestones in LE SSERAFIM’s history.
 
-#### Example Response:
+#### Example Response :
 ```json
 [
   {
@@ -129,9 +129,9 @@ Retrieve major events and milestones in LE SSERAFIM’s history.
 
 ### 🔹 GET `/timeline/{id}`
 
-Fetch a specific historical event by ID.
+Get a specific historical event by ID.
 
-#### Example:
+#### Example :
 `GET /timeline/1`
 
 ---
