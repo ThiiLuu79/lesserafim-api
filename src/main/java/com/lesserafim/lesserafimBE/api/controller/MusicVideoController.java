@@ -7,6 +7,8 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,10 +30,17 @@ public class MusicVideoController {
     )
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Music videos retrieved successfully"),
+            @ApiResponse(responseCode = "404", description = "No music videos found"),
     })
     @GetMapping
-    public List<MusicVideo> getAllMusicVideos() {
-        return musicVideoService.getAllMusicVideos();
+    public ResponseEntity<?> getAllMusicVideos() {
+        List<MusicVideo> allMusicVideos = musicVideoService.getAllMusicVideos();
+
+        if(allMusicVideos.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No music videos available.");
+        }
+
+        return ResponseEntity.ok(allMusicVideos);
     }
 
     @CrossOrigin(origins = {"http://localhost:3000", "https://lesserafim-page.netlify.app/"})
@@ -41,11 +50,28 @@ public class MusicVideoController {
     )
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Music video retrieved successfully"),
+            @ApiResponse(responseCode = "400", description = "Invalid ID parameter"),
+            @ApiResponse(responseCode = "404", description = "No music video found for the given ID"),
+            @ApiResponse(responseCode = "500", description = "Internal server error")
     })
     @GetMapping("/{id}")
-    public MusicVideo getMusicVideoById(
+    public ResponseEntity<?> getMusicVideoById(
             @Parameter(description = "The ID of the MV to retrieve", example = "1")
-            @PathVariable int id) {
-        return musicVideoService.getMusicVideoById(id);
+            @PathVariable Integer id) {
+        try {
+            if (id == null) {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("ID parameter cannot be null.");
+            }
+
+            MusicVideo musicVideo = musicVideoService.getMusicVideoById(id);
+            if (musicVideo == null) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No music video found for the given ID.");
+            }
+
+            return ResponseEntity.ok(musicVideo);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("An error occurred while processing the request.");
+        }
     }
 }

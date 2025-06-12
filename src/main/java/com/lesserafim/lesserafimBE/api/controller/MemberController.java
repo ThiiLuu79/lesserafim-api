@@ -7,6 +7,8 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,10 +31,16 @@ public class MemberController {
     )
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Members retrieved successfully"),
+            @ApiResponse(responseCode = "404", description = "No members found"),
     })
     @GetMapping
-    public List<Member> getAllMembers() {
-        return memberService.getAllMembers();
+    public ResponseEntity<?> getAllMembers() {
+        List<Member> allMember = memberService.getAllMembers();
+
+        if(allMember.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No members found.");
+        }
+        return ResponseEntity.ok(allMember);
     }
 
     @CrossOrigin(origins = {"http://localhost:3000", "https://lesserafim-page.netlify.app/"})
@@ -42,11 +50,28 @@ public class MemberController {
     )
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Member retrieved successfully"),
+            @ApiResponse(responseCode = "400", description = "Invalid ID parameter"),
+            @ApiResponse(responseCode = "404", description = "No member found for the given ID"),
+            @ApiResponse(responseCode = "500", description = "Internal server error")
     })
     @GetMapping("/{id}")
-    public Member getMemberById(
+    public ResponseEntity<?> getMemberById(
             @Parameter(description = "The ID of the member to retrieve", example = "1")
-            @PathVariable int id) {
-        return memberService.getMemberById(id);
+            @PathVariable Integer id) {
+        try {
+            if (id == null) {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("ID parameter cannot be null.");
+            }
+
+            Member member = memberService.getMemberById(id);
+            if (member == null) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No member found for the given ID.");
+            }
+
+            return ResponseEntity.ok(member);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("An error occurred while processing the request.");
+        }
     }
 }
