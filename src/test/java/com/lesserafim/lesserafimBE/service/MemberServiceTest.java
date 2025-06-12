@@ -5,29 +5,41 @@ import com.lesserafim.lesserafimBE.repository.MemberRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 public class MemberServiceTest {
 
+    private MemberRepository memberRepository;
     private MemberService memberService;
-    private final MemberRepository memberRepository;
-
-    public MemberServiceTest(MemberRepository memberRepository) {
-        this.memberRepository = memberRepository;
-    }
 
     @BeforeEach
     public void setUp() {
+        memberRepository = mock(MemberRepository.class);
+
+        // Sample member data
+        Member sample = new Member();
+        sample.setId(1);
+        sample.setName("Kim Chaewon");
+        sample.setBirthday(new Date());
+        sample.setPosition("Leader, Vocalist");
+
+        when(memberRepository.findAll()).thenReturn(List.of(sample));
+
         memberService = new MemberService(memberRepository);
     }
 
     @Test
     public void testGetAllMembers() {
-        List<Member> discographies = memberService.getAllMembers();
-        assertNotNull(discographies);
-        assertTrue(discographies.size() >= 1, "Members list should not be empty");
+        List<Member> members = memberService.getAllMembers();
+        assertNotNull(members);
+        assertFalse(members.isEmpty());
+        assertEquals("Kim Chaewon", members.get(0).getName());
     }
 
     @Test

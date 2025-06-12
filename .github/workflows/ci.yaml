@@ -20,5 +20,5 @@ jobs:
       - name: Grant execute permissions to Maven Wrapper
         run: chmod +x mvnw
 
- #     - name: Run Unit Tests
- #       run: ./mvnw test
+      - name: Run Unit Tests
+        run: ./mvnw test

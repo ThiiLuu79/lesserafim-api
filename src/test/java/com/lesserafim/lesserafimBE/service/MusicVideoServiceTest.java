@@ -5,20 +5,31 @@ import com.lesserafim.lesserafimBE.repository.MusicVideoRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 public class MusicVideoServiceTest {
 
+    private MusicVideoRepository musicVideoRepository;
     private MusicVideoService musicVideoService;
-    private final MusicVideoRepository musicVideoRepository;
 
-    public MusicVideoServiceTest(MusicVideoRepository musicVideoRepository) {
-        this.musicVideoRepository = musicVideoRepository;
-    }
     @BeforeEach
     public void setUp() {
+        musicVideoRepository = mock(MusicVideoRepository.class);
+
+        // Create a sample MV
+        MusicVideo sampleMV = new MusicVideo();
+        sampleMV.setId(1);
+        sampleMV.setTitle("FEARLESS");
+        sampleMV.setReleaseDate(new Date());
+        sampleMV.setIframeSrc("https://www.youtube.com/watch?v=4vbDFu0PUew");
+
+        when(musicVideoRepository.findAll()).thenReturn(List.of(sampleMV));
+
         musicVideoService = new MusicVideoService(musicVideoRepository);
     }
 
@@ -26,7 +37,8 @@ public class MusicVideoServiceTest {
     public void testGetAllMVs() {
         List<MusicVideo> musicVideos = musicVideoService.getAllMusicVideos();
         assertNotNull(musicVideos);
-        assertTrue(musicVideos.size() >= 1, "Music videos list should not be empty");
+        assertFalse(musicVideos.isEmpty());
+        assertEquals("FEARLESS", musicVideos.get(0).getTitle());
     }
 
     @Test

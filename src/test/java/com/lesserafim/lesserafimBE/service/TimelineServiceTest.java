@@ -5,20 +5,31 @@ import com.lesserafim.lesserafimBE.repository.TimelineRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 public class TimelineServiceTest {
 
+    private TimelineRepository timelineRepository;
     private TimelineService timelineService;
-    private final TimelineRepository timelineRepository;
 
-    public TimelineServiceTest(TimelineRepository timelineRepository) {
-        this.timelineRepository = timelineRepository;
-    }
     @BeforeEach
     public void setUp() {
+        timelineRepository = mock(TimelineRepository.class);
+
+        // Create a sample timeline entry
+        Timeline sample = new Timeline();
+        sample.setId(1);
+        sample.setTitle("Debut");
+        sample.setDate(new Date());
+        sample.setText("LE SSERAFIM debuts with FEARLESS.");
+
+        when(timelineRepository.findAll()).thenReturn(List.of(sample));
+
         timelineService = new TimelineService(timelineRepository);
     }
 
@@ -26,7 +37,8 @@ public class TimelineServiceTest {
     public void testGetAllTimeline() {
         List<Timeline> t = timelineService.getCompleteTimeline();
         assertNotNull(t);
-        assertTrue(t.size() >= 1, "Timeline list should not be empty");
+        assertFalse(t.isEmpty());
+        assertEquals("Debut", t.get(0).getTitle());
     }
 
     @Test
