@@ -1,17 +1,21 @@
 package com.lesserafim.lesserafimBE.api.model;
 
+import java.util.Date;
+
 public class MusicVideo {
     private int id;
     private String title;
     private String iframeSrc;
+    private Date releaseDate;
 
     public MusicVideo() {
     }
 
-    public MusicVideo(int id, String title, String iframeSrc) {
+    public MusicVideo(int id, String title, String iframeSrc, Date releaseDate) {
         this.id = id;
         this.title = title;
         this.iframeSrc = iframeSrc;
+        this.releaseDate = releaseDate;
     }
 
     public int getId() {
@@ -36,5 +40,12 @@ public class MusicVideo {
 
     public void setIframeSrc(String iframeSrc) {
         this.iframeSrc = iframeSrc;
+    }
+    public Date getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(Date releaseDate) {
+        this.releaseDate = releaseDate;
     }
 }

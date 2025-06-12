@@ -91,7 +91,8 @@ Fetch all official music videos.
   {
     "id": 1,
     "title": "Different",
-    "iframeSrc": "https://www.youtube.com/embed/HFZUAXhdnHk?si=-MtMTDnQAR2azgpl"
+    "iframeSrc": "https://www.youtube.com/embed/HFZUAXhdnHk?si=-MtMTDnQAR2azgpl",
+    "releaseDate": "2025-06-08T00:00:00.000+00:00"
   }
 ]
 ```
