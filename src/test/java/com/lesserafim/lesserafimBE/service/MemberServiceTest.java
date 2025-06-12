@@ -1,6 +1,7 @@
 package com.lesserafim.lesserafimBE.service;
 
 import com.lesserafim.lesserafimBE.api.model.Member;
+import com.lesserafim.lesserafimBE.repository.MemberRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,10 +12,15 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MemberServiceTest {
 
     private MemberService memberService;
+    private final MemberRepository memberRepository;
+
+    public MemberServiceTest(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     @BeforeEach
     public void setUp() {
-        memberService = new MemberService();
+        memberService = new MemberService(memberRepository);
     }
 
     @Test

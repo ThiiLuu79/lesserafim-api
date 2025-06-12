@@ -3,6 +3,8 @@ package com.lesserafim.lesserafimBE.service;
 import com.lesserafim.lesserafimBE.api.model.Member;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lesserafim.lesserafimBE.repository.MemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
@@ -13,9 +15,26 @@ import java.util.List;
 public class MemberService {
 
     private List<Member> members = new ArrayList<>();
+    private final MemberRepository memberRepository;
 
-    public MemberService() {
-        loadMembersFromJson();
+    @Autowired
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+        loadMemberFromDatabase();
+    }
+
+    private void loadMemberFromDatabase() {
+        try {
+            List<Member> dbMembers = memberRepository.findAll();
+            if (!dbMembers.isEmpty()) {
+                members = dbMembers;
+                System.out.println("Fetching members from MongoDB.");
+                return;
+            }
+            System.out.println("No members found in the database.");
+        } catch (Exception e) {
+            System.out.println("Failed to load members from database: " + e.getMessage());
+        }
     }
 
     private void loadMembersFromJson() {

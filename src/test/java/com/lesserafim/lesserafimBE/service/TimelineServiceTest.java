@@ -1,6 +1,7 @@
 package com.lesserafim.lesserafimBE.service;
 
 import com.lesserafim.lesserafimBE.api.model.Timeline;
+import com.lesserafim.lesserafimBE.repository.TimelineRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,10 +12,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TimelineServiceTest {
 
     private TimelineService timelineService;
+    private final TimelineRepository timelineRepository;
 
+    public TimelineServiceTest(TimelineRepository timelineRepository) {
+        this.timelineRepository = timelineRepository;
+    }
     @BeforeEach
     public void setUp() {
-        timelineService = new TimelineService();
+        timelineService = new TimelineService(timelineRepository);
     }
 
     @Test

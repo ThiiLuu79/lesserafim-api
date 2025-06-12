@@ -1,6 +1,7 @@
 package com.lesserafim.lesserafimBE.service;
 
 import com.lesserafim.lesserafimBE.api.model.Discography;
+import com.lesserafim.lesserafimBE.repository.DiscographyRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,10 +12,15 @@ import static org.junit.jupiter.api.Assertions.*;
 public class DiscographyServiceTest {
 
     private DiscographyService discographyService;
+    private final DiscographyRepository discographyRepository;
+
+    public DiscographyServiceTest(DiscographyRepository discographyRepository) {
+        this.discographyRepository = discographyRepository;
+    }
 
     @BeforeEach
     public void setUp() {
-        discographyService = new DiscographyService();
+        discographyService = new DiscographyService(discographyRepository);
     }
 
     @Test

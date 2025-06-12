@@ -3,6 +3,8 @@ package com.lesserafim.lesserafimBE.service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lesserafim.lesserafimBE.api.model.Discography;
+import com.lesserafim.lesserafimBE.repository.DiscographyRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
@@ -11,10 +13,28 @@ import java.util.List;
 
 @Service
 public class DiscographyService {
+
+    private final DiscographyRepository discographyRepository;
     private List<Discography> discographies = new ArrayList<>();
 
-    public DiscographyService() {
-        loadDiscographyFromJson();
+    @Autowired
+    public DiscographyService(DiscographyRepository discographyRepository) {
+        this.discographyRepository = discographyRepository;
+        loadDiscographyFromDatabase();
+    }
+
+    private void loadDiscographyFromDatabase() {
+        try {
+            List<Discography> dbDiscographies = discographyRepository.findAll();
+            if (!dbDiscographies.isEmpty()) {
+                discographies = dbDiscographies;
+                System.out.println("Fetching discographies from MongoDB.");
+                return;
+            }
+            System.out.println("No discographies found in the database.");
+        } catch (Exception e) {
+            System.out.println("Failed to load discographies from database: " + e.getMessage());
+        }
     }
 
     private void loadDiscographyFromJson() {
