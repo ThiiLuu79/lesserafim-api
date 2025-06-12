@@ -25,7 +25,8 @@ public class DataImporter implements CommandLineRunner {
     private final DiscographyRepository discographyRepository;
     private final MusicVideoRepository musicVideoRepository;
 
-    public DataImporter(MemberRepository memberRepository, TimelineRepository timelineRepository, DiscographyRepository discographyRepository, MusicVideoRepository musicVideoRepository) {
+    public DataImporter(MemberRepository memberRepository, TimelineRepository timelineRepository,
+                        DiscographyRepository discographyRepository, MusicVideoRepository musicVideoRepository) {
         this.memberRepository = memberRepository;
         this.timelineRepository = timelineRepository;
         this.discographyRepository = discographyRepository;
@@ -33,35 +34,47 @@ public class DataImporter implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         ObjectMapper mapper = new ObjectMapper();
 
-        // Members
-        memberRepository.deleteAll();  // clear existing members
-        InputStream membersStream = new ClassPathResource("membersData.json").getInputStream();
-        List<Member> members = mapper.readValue(membersStream, new TypeReference<List<Member>>() {});
-        memberRepository.saveAll(members);
-        System.out.println("Imported members into MongoDB.");
+        // Import Members
+        try (InputStream membersStream = new ClassPathResource("membersData.json").getInputStream()) {
+            List<Member> members = mapper.readValue(membersStream, new TypeReference<>() {});
+            memberRepository.deleteAll();
+            memberRepository.saveAll(members);
+            System.out.println("✅ Imported members into MongoDB.");
+        } catch (Exception e) {
+            System.err.println("❌ Failed to import members: " + e.getMessage());
+        }
 
-        // Timeline
-        timelineRepository.deleteAll();  // clear existing timeline
-        InputStream timelineStream = new ClassPathResource("timelineData.json").getInputStream();
-        List<Timeline> timeline = mapper.readValue(timelineStream, new TypeReference<List<Timeline>>() {});
-        timelineRepository.saveAll(timeline);
-        System.out.println("Imported timeline into MongoDB.");
+        // Import Timeline
+        try (InputStream timelineStream = new ClassPathResource("timelineData.json").getInputStream()) {
+            List<Timeline> timeline = mapper.readValue(timelineStream, new TypeReference<>() {});
+            timelineRepository.deleteAll();
+            timelineRepository.saveAll(timeline);
+            System.out.println("✅ Imported timeline into MongoDB.");
+        } catch (Exception e) {
+            System.err.println("❌ Failed to import timeline: " + e.getMessage());
+        }
 
-        // Discography
-        discographyRepository.deleteAll();  // clear existing discographies
-        InputStream discographyStream = new ClassPathResource("discographyData.json").getInputStream();
-        List<Discography> disc = mapper.readValue(discographyStream, new TypeReference<List<Discography>>() {});
-        discographyRepository.saveAll(disc);
-        System.out.println("Imported discographies into MongoDB.");
+        // Import Discography
+        try (InputStream discographyStream = new ClassPathResource("discographyData.json").getInputStream()) {
+            List<Discography> disc = mapper.readValue(discographyStream, new TypeReference<>() {});
+            discographyRepository.deleteAll();
+            discographyRepository.saveAll(disc);
+            System.out.println("✅ Imported discographies into MongoDB.");
+        } catch (Exception e) {
+            System.err.println("❌ Failed to import discographies: " + e.getMessage());
+        }
 
-        // Music Videos
-        musicVideoRepository.deleteAll();  // clear existing MVs
-        InputStream mvStream = new ClassPathResource("musicVideoData.json").getInputStream();
-        List<MusicVideo> mv = mapper.readValue(mvStream, new TypeReference<List<MusicVideo>>() {});
-        musicVideoRepository.saveAll(mv);
-        System.out.println("Imported mvs into MongoDB.");
+        // Import Music Videos
+        try (InputStream mvStream = new ClassPathResource("musicVideoData.json").getInputStream()) {
+            List<MusicVideo> mv = mapper.readValue(mvStream, new TypeReference<>() {});
+            musicVideoRepository.deleteAll();
+            musicVideoRepository.saveAll(mv);
+            System.out.println("✅ Imported music videos into MongoDB.");
+        } catch (Exception e) {
+            System.err.println("❌ Failed to import music videos: " + e.getMessage());
+        }
     }
 }
