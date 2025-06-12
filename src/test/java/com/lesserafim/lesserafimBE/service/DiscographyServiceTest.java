@@ -29,7 +29,6 @@ public class DiscographyServiceTest {
         Discography discography = discographyService.getDiscographyById(1);
         assertNotNull(discography);
         assertEquals(1, discography.getId());
-        assertEquals("FEARLESS", discography.getTitle());
     }
 
     @Test

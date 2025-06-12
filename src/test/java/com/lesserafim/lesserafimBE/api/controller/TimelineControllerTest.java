@@ -1,8 +1,6 @@
 package com.lesserafim.lesserafimBE.api.controller;
 
-import com.lesserafim.lesserafimBE.api.model.Discography;
 import com.lesserafim.lesserafimBE.api.model.Timeline;
-import com.lesserafim.lesserafimBE.service.DiscographyService;
 import com.lesserafim.lesserafimBE.service.TimelineService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
