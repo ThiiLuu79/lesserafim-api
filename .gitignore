@@ -34,3 +34,9 @@ build/
 
 ### Environment ###
 .env
+
+## Ressources ##
+/src/main/resources/discographyData.json
+/src/main/resources/membersdata.json
+/src/main/resources/musicVideoData.json
+/src/main/resources/timelineData.json
