@@ -7,6 +7,8 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +19,8 @@ import java.util.List;
 @RequestMapping("/api/timeline")
 @Tag(name = "Timeline", description = "Endpoints to get LE SSERAFIM Timeline.")
 public class TimelineController {
+
+    private static final Logger logger = LoggerFactory.getLogger(TimelineController.class);
 
     private final TimelineService timelineService;
 
@@ -35,12 +39,16 @@ public class TimelineController {
     })
     @GetMapping
     public ResponseEntity<?> getAllTimeline() {
+        logger.info("GET /api/timeline - Fetching complete timeline");
+
         List<Timeline> timeline = timelineService.getCompleteTimeline();
 
-        if(timeline.isEmpty()){
+        if (timeline.isEmpty()) {
+            logger.warn("GET /api/timeline - No timeline data found (404)");
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No timeline available.");
         }
 
+        logger.info("GET /api/timeline - Retrieved {} timeline items", timeline.size());
         return ResponseEntity.ok(timeline);
     }
 
@@ -59,21 +67,29 @@ public class TimelineController {
     public ResponseEntity<?> getTimelineById(
             @Parameter(description = "The ID of the timeline item to retrieve", example = "1")
             @PathVariable Integer id) {
+
+        logger.info("GET /api/timeline/{} - Request to fetch timeline item", id);
+
         try {
             if (id == null) {
+                logger.error("GET /api/timeline - ID parameter is null (400)");
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("ID parameter cannot be null.");
             }
 
             Timeline timelineItem = timelineService.getTimelineById(id);
+
             if (timelineItem == null) {
+                logger.warn("GET /api/timeline/{} - No timeline item found (404)", id);
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No timeline item found for the given ID.");
             }
 
+            logger.info("GET /api/timeline/{} - Successfully retrieved timeline item", id);
             return ResponseEntity.ok(timelineItem);
+
         } catch (Exception e) {
+            logger.error("GET /api/timeline/{} - Internal server error (500): {}", id, e.getMessage());
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("An error occurred while processing the request.");
         }
     }
-
 }
