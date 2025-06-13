@@ -10,7 +10,7 @@ import com.lesserafim.lesserafimBE.repository.DiscographyRepository;
 import com.lesserafim.lesserafimBE.repository.MemberRepository;
 import com.lesserafim.lesserafimBE.repository.MusicVideoRepository;
 import com.lesserafim.lesserafimBE.repository.TimelineRepository;
-import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +18,8 @@ import java.io.InputStream;
 import java.util.List;
 
 @Component
-public class DataImporter implements CommandLineRunner {
+@Profile("manual-import")
+public class DataImporter {
 
     private final MemberRepository memberRepository;
     private final TimelineRepository timelineRepository;
@@ -33,11 +34,9 @@ public class DataImporter implements CommandLineRunner {
         this.musicVideoRepository = musicVideoRepository;
     }
 
-    @Override
-    public void run(String... args) {
+    public void importAllData() {
         ObjectMapper mapper = new ObjectMapper();
 
-        // Import Members
         try (InputStream membersStream = new ClassPathResource("membersdata.json").getInputStream()) {
             List<Member> members = mapper.readValue(membersStream, new TypeReference<>() {});
             memberRepository.deleteAll();
@@ -47,7 +46,6 @@ public class DataImporter implements CommandLineRunner {
             System.err.println("❌ Failed to import members: " + e.getMessage());
         }
 
-        // Import Timeline
         try (InputStream timelineStream = new ClassPathResource("timelineData.json").getInputStream()) {
             List<Timeline> timeline = mapper.readValue(timelineStream, new TypeReference<>() {});
             timelineRepository.deleteAll();
@@ -57,7 +55,6 @@ public class DataImporter implements CommandLineRunner {
             System.err.println("❌ Failed to import timeline: " + e.getMessage());
         }
 
-        // Import Discography
         try (InputStream discographyStream = new ClassPathResource("discographyData.json").getInputStream()) {
             List<Discography> disc = mapper.readValue(discographyStream, new TypeReference<>() {});
             discographyRepository.deleteAll();
@@ -67,7 +64,6 @@ public class DataImporter implements CommandLineRunner {
             System.err.println("❌ Failed to import discographies: " + e.getMessage());
         }
 
-        // Import Music Videos
         try (InputStream mvStream = new ClassPathResource("musicVideoData.json").getInputStream()) {
             List<MusicVideo> mv = mapper.readValue(mvStream, new TypeReference<>() {});
             musicVideoRepository.deleteAll();

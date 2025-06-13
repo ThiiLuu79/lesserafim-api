@@ -144,3 +144,8 @@ Get a specific historical event by ID.
 ## ℹ️ Data Sources
 [Discography data source](https://kprofiles.com/le-sserafim-discography/)   
 [Members data source](https://kprofiles.com/le-sserafim-members-profile/)   
+---
+## 🚀 Command to import data
+```sh
+./mvnw spring-boot:run "-Dspring-boot.run.arguments=--spring.profiles.active=manual-import"
+```
