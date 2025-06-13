@@ -141,3 +141,6 @@ Get a specific historical event by ID.
 `GET /timeline/1`
 
 ---
+## ℹ️ Data Sources
+[Discography data source](https://kprofiles.com/le-sserafim-discography/)   
+[Members data source](https://kprofiles.com/le-sserafim-members-profile/)   
