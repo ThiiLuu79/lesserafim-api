@@ -382,9 +382,29 @@
   {
     "id": 31,
     "title": "DIFFERENT",
-    "type": "4th Japanese Single",
-    "releaseDate": "2025-06-24",
+    "type": "Pre-Release Japanese Single",
+    "releaseDate": "2025-06-08",
     "songs": ["DIFFERENT"],
     "imageURL": "https://lesserafimapi.onrender.com/images/discography/different.png"
+  },
+  {
+    "id": 32,
+    "title": "DIFFERENT (English ver.)",
+    "type": "English Single",
+    "releaseDate": "2025-06-13",
+    "songs": ["DIFFERENT (English ver.)"],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/different_en.png"
+  },
+  {
+    "id": 33,
+    "title": "DIFFERENT",
+    "type": "4th Japanese Single",
+    "releaseDate": "2025-06-24",
+    "songs": [
+      "DIFFERENT",
+      "HOT (Japanese ver.)",
+      "Kawaii (Prod. Gen Hoshino)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/diff.png"
   }
 ]
