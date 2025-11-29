@@ -406,5 +406,44 @@
       "Kawaii (Prod. Gen Hoshino)"
     ],
     "imageURL": "https://lesserafimapi.onrender.com/images/discography/diff.png"
+  },
+  {
+    "id": 34,
+    "title": "The NOISE (Contains A Samples Of 夜に駆ける)",
+    "type": "Japanese Collaboration  Single (With Yoasobi)",
+    "releaseDate": "2025-09-26",
+    "songs": [
+      "The NOISE (Contains A Samples Of 夜に駆ける)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/noise.jpg"
+  },
+  {
+    "id": 35,
+    "title": "SPAGHETTI",
+    "type": "1st Single Album",
+    "releaseDate": "2025-10-24",
+    "songs": [
+      "SPAGHETTI (feat. j-hope of BTS)",
+      "Pearlies (My oyster is the world)",
+      "SPAGHETTI (Member ver.)",
+      "SPAGHETTI (English ver.) (feat. j-hope of BTS)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/spaghetti.jpeg"
+  },
+  {
+    "id": 36,
+    "title": "SPAGHETTI (Bon Appétit Remixes)",
+    "type": "Remixes",
+    "releaseDate": "2025-10-31",
+    "songs": [
+      "SPAGHETTI (feat. j-hope of BTS)",
+      "SPAGHETTI (feat. j-hope of BTS) (Hot Chili Remix)",
+      "SPAGHETTI (feat. j-hope of BTS) (Creamy Cheese Remix)",
+      "SPAGHETTI (feat. j-hope of BTS) (Spicy Jalapeno Remix)",
+      "SPAGHETTI (feat. j-hope of BTS) (Sped Up ver.)",
+      "SPAGHETTI (feat. j-hope of BTS) (Slowed & Reverb ver.)",
+      "SPAGHETTI (feat. j-hope of BTS) (Inst.)"
+    ],
+    "imageURL": "https://lesserafimapi.onrender.com/images/discography/spaghetti2.jpeg"
   }
 ]
